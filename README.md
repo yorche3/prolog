@@ -9,6 +9,7 @@ Proyectos en **Prolog (SWI-Prolog)**, con programas simples ejecutados consultan
 | Módulo | Descripción |
 | ------ | ----------- |
 | [`core/foundations/`](core/foundations/) | **Fase 0 — Fundamentos**: `helloworld`, `hellouser`, `unit_test/calculator`, `numbers` |
+| [`core/algorithms/`](core/algorithms/) | **Fase 1 — Algoritmos Puros**: `naive_sort` |
 
 ---
 
@@ -32,6 +33,10 @@ cd core/foundations/numbers/test
 swipl -q -f recursive_tests.pl -t halt
 swipl -q -f recursive_with_acc_tests.pl -t halt
 swipl -q -f iterative_tests.pl -t halt
+
+# Naive Sort Tests
+cd core/algorithms/naive_sort/test
+swipl -q -f naive_sort_tests.pl -t halt
 ```
 
 ---

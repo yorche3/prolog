@@ -11,6 +11,7 @@ Los módulos de esta fase trabajan sobre **listas**, que en Prolog **son inmutab
 | Módulo | Especificación | Enfoque | Tests | Estado |
 |--------|---------------|---------|:-----:|:------:|
 | [`naive_sort/`](naive_sort/) | [05_Naive_Sort](https://yorche3.github.io/programming_languages/core/algorithms/05_Naive_Sort/) | `swipl -q -f` + plunit | 3 | ✅ |
+| [`data_structures_basics/`](data_structures_basics/) | [06_Data_Structures_Basics](https://yorche3.github.io/programming_languages/core/algorithms/06_Data_Structures_Basics/) | `swipl -q -f` + plunit | 23 | ✅ |
 
 ---
 
@@ -18,12 +19,19 @@ Los módulos de esta fase trabajan sobre **listas**, que en Prolog **son inmutab
 
 ```text
 algorithms/
-└── naive_sort/                      # 05_Naive_Sort
+├── naive_sort/                      # 05_Naive_Sort
+│   ├── .gitignore                   # Ignora *.qlf
+│   ├── src/
+│   │   └── naive_sort.pl            # 3 predicados del contrato + 4 helpers
+│   ├── test/
+│   │   └── naive_sort_tests.pl      # 3 tests × 7 casos
+│   └── README.md
+└── data_structures_basics/          # 06_Data_Structures_Basics
     ├── .gitignore                   # Ignora *.qlf
     ├── src/
-    │   └── naive_sort.pl            # 3 predicados del contrato + 4 helpers
+    │   └── data_structures_basics.pl # node/2, linked_list/3, stack/2, queue/3
     ├── test/
-    │   └── naive_sort_tests.pl      # 3 tests × 7 casos
+    │   └── data_structures_basics_tests.pl # 23 tests en plunit
     └── README.md
 ```
 
@@ -59,6 +67,10 @@ algorithms/
 # Naive Sort Tests
 cd naive_sort/test
 swipl -q -f naive_sort_tests.pl -t halt
+
+# Data Structures Basics Tests
+cd data_structures_basics/test
+swipl -q -f data_structures_basics_tests.pl -t halt
 ```
 
 ---

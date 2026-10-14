@@ -8,13 +8,13 @@ Implementación de la especificación [01_Hello_World](https://yorche3.github.io
 
 | Archivo | Propósito |
 |---------|-----------|
-| [`helloworld.pl`](helloworld.pl) | Código fuente: define la regla `hello/0` que imprime `"Hello, World! from Prolog"`. |
+| [`hello_world.pl`](hello_world.pl) | Código fuente: define la regla `hello/0` que imprime `"Hello, World! from Prolog!"`. |
 
 **Estructura de directorios esperada:**
 
 ```text
 helloworld/
-├── helloworld.pl   # Código fuente
+├── hello_world.pl   # Código fuente
 └── README.md       # Este archivo
 ```
 
@@ -34,7 +34,7 @@ helloworld/
    mkdir -p prolog/core/foundations/helloworld
    ```
 
-2. Escribir el archivo `helloworld.pl` con el código fuente.
+2. Escribir el archivo `hello_world.pl` con el código fuente.
 
 3. No se necesita ningún paso adicional de construcción o vinculación de dependencias.
 
@@ -72,20 +72,20 @@ swipl --version
 
 ```bash
 cd prolog/core/foundations/helloworld
-swipl -q -g hello -t halt helloworld.pl
+swipl -q -g hello -t halt hello_world.pl
 ```
 
 ### Alternativa equivalente / Equivalent alternative
 
 ```bash
-swipl -q -f helloworld.pl -g "hello, halt"
+swipl -q -f hello_world.pl -g "hello, halt"
 ```
 
 ### Ejecutar interactivamente / Run interactively
 
 ```bash
 cd prolog/core/foundations/helloworld
-swipl helloworld.pl
+swipl hello_world.pl
 ```
 
 ```prolog

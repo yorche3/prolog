@@ -1,1 +1,1 @@
-hello :- format('Hello, World! from Prolog~n').
+hello :- format('Hello, World! from Prolog!~n').

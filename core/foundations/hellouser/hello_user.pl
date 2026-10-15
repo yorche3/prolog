@@ -1,4 +1,4 @@
-hellouser :-
+main :-
     write('Enter your name: '),
     read_line_to_string(current_input, Name),
 

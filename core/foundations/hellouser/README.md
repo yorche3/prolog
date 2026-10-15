@@ -10,7 +10,7 @@ Lee un nombre desde la entrada estándar y saluda al usuario.
 
 | Archivo | Propósito |
 |---------|-----------|
-| [`hello_user.pl`](hello_user.pl) | Código fuente: define la regla `hellouser/0` que solicita un nombre y saluda. |
+| [`hello_user.pl`](hello_user.pl) | Código fuente: define la regla `main/0` que solicita un nombre y saluda. |
 
 **Estructura de directorios esperada:**
 
@@ -67,7 +67,7 @@ No se requieren archivos de configuración de build. El programa se ejecuta dire
 3. Print `"Hello, <name>!"` with `format/2` using `~w`.
 
 ```prolog
-hellouser :-
+main :-
     write('Enter your name: '),
     read_line_to_string(current_input, Name),
 
@@ -99,7 +99,7 @@ swipl --version
 
 ```bash
 cd prolog/core/foundations/hellouser
-swipl -q -g hellouser -t halt hello_user.pl
+swipl -q -g main -t halt hello_user.pl
 ```
 
 ### Ejecutar interactivamente / Run interactively
@@ -110,7 +110,7 @@ swipl hello_user.pl
 ```
 
 ```prolog
-?- hellouser.
+?- main.
 Enter your name: Ada
 Hello, Ada!
 true.
@@ -129,8 +129,8 @@ Hello, Ada!
 
 ## 📝 Notas de implementación / Implementation Notes
 
-- **ES:** Prolog no tiene una función `main`: la ejecución es la consulta de un objetivo (`-g hellouser`) contra la base de conocimiento.
-- **EN:** Prolog has no `main` function: execution is the query of a goal (`-g hellouser`) against the knowledge base.
+- **ES:** Prolog no tiene una función `main`: la ejecución es la consulta de un objetivo (`-g main`) contra la base de conocimiento.
+- **EN:** Prolog has no `main` function: execution is the query of a goal (`-g main`) against the knowledge base.
 - **ES:** SWI-Prolog vacía el buffer de salida antes de leer de la entrada estándar, por lo que el prompt aparece correctamente.
 - **EN:** SWI-Prolog flushes the output buffer before reading from standard input, so the prompt appears correctly.
 

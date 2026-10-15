@@ -10,13 +10,13 @@ Lee un nombre desde la entrada estándar y saluda al usuario.
 
 | Archivo | Propósito |
 |---------|-----------|
-| [`hellouser.pl`](hellouser.pl) | Código fuente: define la regla `hellouser/0` que solicita un nombre y saluda. |
+| [`hello_user.pl`](hello_user.pl) | Código fuente: define la regla `hellouser/0` que solicita un nombre y saluda. |
 
 **Estructura de directorios esperada:**
 
 ```text
 hellouser/
-├── hellouser.pl    # Código fuente
+├── hello_user.pl    # Código fuente
 └── README.md       # Este archivo
 ```
 
@@ -44,7 +44,7 @@ hellouser/
    mkdir -p prolog/core/foundations/hellouser
    ```
 
-2. Escribir el archivo `hellouser.pl` con el código fuente.
+2. Escribir el archivo `hello_user.pl` con el código fuente.
 
 3. No se necesita ningún paso adicional de construcción o vinculación de dependencias.
 
@@ -99,14 +99,14 @@ swipl --version
 
 ```bash
 cd prolog/core/foundations/hellouser
-swipl -q -g hellouser -t halt hellouser.pl
+swipl -q -g hellouser -t halt hello_user.pl
 ```
 
 ### Ejecutar interactivamente / Run interactively
 
 ```bash
 cd prolog/core/foundations/hellouser
-swipl hellouser.pl
+swipl hello_user.pl
 ```
 
 ```prolog

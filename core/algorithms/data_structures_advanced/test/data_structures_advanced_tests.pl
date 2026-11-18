@@ -350,6 +350,19 @@ test(graph_self_loop_and_duplicate) :-
     neighbors_are(Case, G, A, [A]),
     graph_counts(Case, G, 1, 1).
 
+test(graph_neighbour_result_isolation) :-
+    Case = graph_neighbour_result_isolation,
+    graph_label_a(A), graph_label_b(B), graph_label_c(C),
+    graph_with_vertices(Case, [A, B, C], G0),
+    add_edges(Case, G0, [A-B], G1),
+    should_hold(Case, save_initial_neighbors,
+                graph_get_neighbors(G1, A, Saved)),
+    should_hold(Case, saved_starts_as_b, Saved == [B]),
+    add_edges(Case, G1, [A-C], G2),
+    should_hold(Case, saved_stays_as_b, Saved == [B]),
+    neighbors_are(Case, G2, A, [B, C]),
+    graph_counts(Case, G2, 3, 2).
+
 :- end_tests(data_structures_advanced_tests).
 
 :- initialization(run_tests(data_structures_advanced_tests), main).
